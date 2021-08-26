@@ -217,6 +217,7 @@ GameObject:
   - component: {fileID: 939364971}
   - component: {fileID: 939364970}
   - component: {fileID: 939364972}
+  - component: {fileID: 939364973}
   m_Layer: 0
   m_Name: MainPlayer
   m_TagString: Untagged
@@ -301,4 +302,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a59fab50533f49a28751b124c352886, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Enemy: {fileID: 896340023215191926, guid: 91539c6b1aaa742258a0668a39d6023d, type: 3}
+  enemySpawned: 0
+  enemySpeed: 1
   LIVES: 3
+  HIGHSCORE: 0
+--- !u!58 &939364973
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939364969}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
