@@ -11,6 +11,11 @@ public class MainPlayerScript : MonoBehaviour {
   public int LIVES = 3;
   public int HIGHSCORE = 0;
   
+  public void IncreaseEnemyDifficulty() {
+    enemySpeed *= 1.1f;
+    Debug.Log("Enemy Speed is now " + enemySpeed);
+  }
+
   void PlacePrefabRandomlyAcrossScreen() {
     bool spawnAbove = (Random.value < 0.5f);
     bool spawnLeft = (Random.value < 0.5f);
@@ -25,7 +30,6 @@ public class MainPlayerScript : MonoBehaviour {
     else if (!spawnAbove && spawnLeft) {enemyPos = new Vector3(XRandPos, -YMaxPosition, 0);} /*Lower side*/
     else {enemyPos = new Vector3(-XMaxPosition, YRandPos, 0);} /*Left corner*/
     Instantiate(Enemy, enemyPos, Quaternion.identity);
-    Debug.Log("New enemy spawned");
   }
   void Awake() {
     if (!Enemy) {
